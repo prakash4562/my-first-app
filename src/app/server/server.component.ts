@@ -9,6 +9,7 @@ export class ServerComponent implements OnInit{
   serverId = 12;
   serverStatus = 'offline';
   allowNewServer = false;
+  serverCreationStatus = 'No server was created!'
 
   getServerStatus() {
     return this.serverStatus;
@@ -23,4 +24,9 @@ export class ServerComponent implements OnInit{
   ngOnInit(): void {
 
   }
+
+  onServerCreation() {
+    this.serverCreationStatus = 'Server has been created.'
+  }
+
 }
