@@ -1,4 +1,4 @@
-<h1 class="d-flex justify-content-center">Server Id {{ serverId }} is {{ getServerStatus() }} </h1>
+<h1 class="d-flex justify-content-center" [ngStyle]="{ color: getColor() }" [ngClass]="{ online: serverStatus === 'online'}">Server Id {{ serverId }} is {{ getServerStatus() }} </h1>
 <!--<h1 class="btn btn-outline-primary">Button</h1>-->
 <div><button class="btn btn-primary" [disabled]="!allowNewServer" (click)="onServerCreation()">Add Server</button></div>
 <!--<input type="text" class="form-control" (input)="onUpdateServerName($event)">-->
